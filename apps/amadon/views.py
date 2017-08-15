@@ -30,7 +30,8 @@ def buy(request):
             request.session['total'] = order_price
 
         return redirect("/amadon/checkout")
-
+    else:
+        return redirect("/")
 def checkout(request):
     return render(request, "amadon/thanks.html")
 
